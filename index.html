@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#25467a" />
+    <title>Bài kiểm tra của Như Ý ✏️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mali:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="fx" aria-hidden="true"></canvas>
+    <button id="mute" class="mute" aria-label="Bật hoặc tắt nhạc" hidden>
+      🔊
+    </button>
+
+    <main class="sheet" id="sheet">
+      <i class="tape" aria-hidden="true"></i>
+
+      <!-- 1. ĐỀ BÀI -->
+      <section class="step active" data-step="1">
+        <h1>KIỂM TRA ĐỊNH KỲ<br /><span class="hl">Môn: Tuổi mới</span></h1>
+        <p>Họ và tên: <b class="pen">Sầm Thị Như Ý</b></p>
+        <p>
+          Lớp: <b class="pen">11</b> &nbsp; Ngày sinh: <b class="pen">07/10</b>
+        </p>
+        <p>Thời gian: <b class="pen">1 phút</b></p>
+        <p class="red">Lưu ý: không được cười. 🤫</p>
+        <button class="btn" data-next aria-label="Bắt đầu làm bài">
+          Làm bài ✏️
+        </button>
+      </section>
+
+      <!-- 2. CÂU 1 -->
+      <section class="step" data-step="2">
+        <h2>Câu 1 <small>(2 điểm)</small></h2>
+        <p>Sinh nhật là ngày gì?</p>
+        <div class="opts">
+          <button
+            class="opt"
+            data-r="Đáp án đúng: cả ba. thầy cho trọn điểm =))"
+          >
+            A. Ngày được ăn bánh 🍰
+          </button>
+          <button
+            class="opt"
+            data-r="Đáp án đúng: cả ba. thầy cho trọn điểm =))"
+          >
+            B. Ngày được nhiều người chúc 🎉
+          </button>
+          <button
+            class="opt"
+            data-r="Đáp án đúng: cả ba. thầy cho trọn điểm =))"
+          >
+            C. Thêm 1 tuổi nhưng chưa chắc thêm độ trưởng thành 💀
+          </button>
+        </div>
+        <p class="note" hidden></p>
+        <button class="btn" data-next hidden>Câu tiếp ➜</button>
+      </section>
+
+      <!-- 3. CÂU 2 -->
+      <section class="step" data-step="3">
+        <h2>Câu 2 <small>(3 điểm)</small></h2>
+        <p>Sau này em muốn làm gì?</p>
+        <div class="opts">
+          <button
+            class="opt"
+            data-r="Tốt! Học trò có quậy thì cứ bình tĩnh nha thầy giáo tương lai 🎓"
+          >
+            A. Giáo viên / Sư phạm 🎓
+          </button>
+          <button
+            class="opt"
+            data-r="Cũng tốt! Bệnh nhân không biết cãi lại 🐶🐱"
+          >
+            B. Bác sĩ thú y 🐶🐱
+          </button>
+          <button
+            class="opt"
+            data-r="Chuẩn nhất. Sau này tính tiếp, hôm nay sinh nhật đã =))"
+          >
+            C. Sau này tính tiếp 😌
+          </button>
+        </div>
+        <p class="note" hidden></p>
+        <button class="btn" data-next hidden>Nộp bài 📝</button>
+      </section>
+
+      <!-- 4. CHẤM ĐIỂM -->
+      <section class="step" data-step="4">
+        <h2>thầy đang chấm bài<span class="dots"></span></h2>
+        <div class="score"><b id="scoreNum">0</b><span>/10</span></div>
+        <div class="stamp" id="stamp" aria-hidden="true">XUẤT SẮC</div>
+        <p class="red" id="why" hidden>Lý do: hôm nay sinh nhật.</p>
+        <button class="btn" id="toReveal" data-next hidden>
+          Xem kết quả 🎉
+        </button>
+      </section>
+
+      <!-- 5. REVEAL -->
+      <section class="step reveal" data-step="5">
+        <div class="balloons" aria-hidden="true">
+          <i>🎈</i><i>🎈</i><i>🎈</i>
+        </div>
+        <div class="cake" aria-hidden="true">🎂</div>
+        <h2 class="big" id="big" aria-label="Chúc mừng sinh nhật Như Ý!"></h2>
+        <button class="btn" data-next hidden>Đọc lời phê 💌</button>
+      </section>
+
+      <!-- 6. LỜI PHÊ -->
+      <section class="step" data-step="6">
+        <h2>Lời phê của thầy <span class="red">✎</span></h2>
+        <ul class="wishes">
+          <li>Chúc Như Ý tuổi mới thật vui nha 🎂</li>
+          <li>Học hành thuận lợi 📚</li>
+          <li>Làm gì cũng suôn sẻ ✨</li>
+          <li>Gặp nhiều chuyện vui 😆</li>
+          <li>Sớm đạt được điều mình muốn 🎓</li>
+        </ul>
+        <p class="red plot">
+          Kế hoạch A có plot twist thì kế hoạch B vẫn còn đó =))
+        </p>
+        <p class="punch">Tuy chưa thân nhưng ít ra cũng sinh cùng tháng =))</p>
+        <button class="btn ghost" id="replay" aria-label="Xem lại từ đầu">
+          Làm lại bài ↻
+        </button>
+      </section>
+    </main>
+    <audio id="music" loop preload="auto"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
